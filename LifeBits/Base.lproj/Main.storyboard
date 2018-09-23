@@ -1,24 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SmN-kj-0hl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
+        <scene sceneID="veQ-gf-Ylb">
+            <objects>
+                <navigationController id="Hwv-pD-srP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="8bt-L0-WOk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MSe-1e-SWh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KIB-VR-oMx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="STV-M8-vpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66" y="-121"/>
+        </scene>
+        <!--Calendar Appearance Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalendarViewController" customModule="LifeBits" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhD-VO-LEi" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                <rect key="frame" x="-4" y="64" width="383" height="57"/>
+                                <color key="backgroundColor" red="0.89009666442871094" green="0.89009666442871094" blue="0.89009666442871094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="d0p-pY-lAt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8CS-QV-kqC" customClass="CVCalendarView" customModule="CVCalendar">
+                                <rect key="frame" x="-4" y="128" width="383" height="415"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="415" id="Lmo-yR-ea1"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="calendarAppearanceDelegate" destination="BYZ-38-t0r" id="kMe-Ba-Bt8"/>
+                                    <outlet property="calendarDelegate" destination="BYZ-38-t0r" id="ZtL-y4-rtT"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="KhD-VO-LEi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7y9-B3-7Pg"/>
+                            <constraint firstItem="8CS-QV-kqC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Bce-Pi-kYh"/>
+                            <constraint firstItem="8CS-QV-kqC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="WsH-l1-nX9"/>
+                            <constraint firstItem="KhD-VO-LEi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ut9-R1-Exb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KhD-VO-LEi" secondAttribute="trailing" constant="-20" id="wAU-K8-TMN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8CS-QV-kqC" secondAttribute="trailing" constant="-20" id="wpf-0X-gor"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="N9W-jg-Pe4">
+                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="C3S-JC-gN7">
+                            <connections>
+                                <action selector="loadPrevBtn:" destination="BYZ-38-t0r" id="raF-bC-Nl6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="jVy-2e-4o1">
+                            <connections>
+                                <action selector="loadNextBtn:" destination="BYZ-38-t0r" id="v66-P4-VxH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="calendarView" destination="8CS-QV-kqC" id="GND-0P-wUz"/>
+                        <outlet property="menuView" destination="KhD-VO-LEi" id="inF-0o-ViY"/>
+                        <outlet property="nextBtn" destination="jVy-2e-4o1" id="Z19-B8-KLB"/>
+                        <outlet property="prevBtn" destination="C3S-JC-gN7" id="RXq-Cz-XeH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="804" y="-122"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2hM-iP-zkt">
+            <objects>
+                <tabBarController id="SmN-kj-0hl" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ywZ-Np-qUR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Hwv-pD-srP" kind="relationship" relationship="viewControllers" id="B4H-ey-rBs"/>
+                        <segue destination="VKa-cz-JiV" kind="relationship" relationship="viewControllers" id="xto-5p-dZR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6fk-zS-edU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1053" y="348"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Pki-rr-DXN">
+            <objects>
+                <navigationController id="VKa-cz-JiV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="EFi-5Q-eh3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R2c-2e-J9d">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vw3-oh-2QG" kind="relationship" relationship="rootViewController" id="8xc-VI-pTY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaR-jB-x70" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="629"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="pFL-Hh-PAY">
+            <objects>
+                <viewController id="vw3-oh-2QG" customClass="HomeViewController" customModule="LifeBits" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TSe-kZ-R88"/>
+                        <viewControllerLayoutGuide type="bottom" id="ysL-eq-Ic8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="20f-dR-I4I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fdH-jg-YrD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6i-wy-P7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="630"/>
         </scene>
     </scenes>
 </document>
