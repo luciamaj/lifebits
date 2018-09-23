@@ -8,6 +8,17 @@ target 'LifeBits' do
   # Pods for LifeBits
   pod 'RealmSwift'
   pod 'CVCalendar'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'R.objc'
+  pod 'Giotto'
+  pod 'Glotty'
+  pod 'Fabric'
+  pod 'Crashlytics'
+  pod 'BonMot'
+  pod 'SVProgressHUD'
+  pod 'TinyConstraints'
+  
   target 'LifeBitsTests' do
     inherit! :search_paths
     # Pods for testing
