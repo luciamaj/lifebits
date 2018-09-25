@@ -13,4 +13,9 @@ extension UIViewController {
         let navigationController = UINavigationController(rootViewController: self)
         return navigationController
     }
+    
+    func withTabBar() -> UITabBarController {
+        let tabController = UITabBarController()
+        return tabController
+    }
 }

@@ -11,6 +11,7 @@ PODS:
   - Glotty (0.3.2):
     - Glotty/Core (= 0.3.2)
   - Glotty/Core (0.3.2)
+  - Parchment (1.4.1)
   - R.objc (0.7.1)
   - Realm (3.10.0):
     - Realm/Headers (= 3.10.0)
@@ -19,7 +20,7 @@ PODS:
     - Realm (= 3.10.0)
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (4.1.0)
-  - TinyConstraints (3.2.1)
+  - TinyConstraints (3.3.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - Fabric
   - Giotto
   - Glotty
+  - Parchment
   - R.objc
   - RealmSwift
   - SVProgressHUD
@@ -44,6 +46,7 @@ SPEC REPOS:
     - Fabric
     - Giotto
     - Glotty
+    - Parchment
     - R.objc
     - Realm
     - RealmSwift
@@ -59,13 +62,14 @@ SPEC CHECKSUMS:
   Fabric: f233c9492b3bbc1f04e3882986740f7988a58edb
   Giotto: 1e51aa3cd2adcf8bc303ca99756056e18d031e27
   Glotty: bb376293367f6d0a97f4f8444f44f655431862eb
+  Parchment: e6c2a3a0063739382dd207e21d48fe5e81f3324a
   R.objc: 2b1a8a1f10c8977e9ac5b6f771b2ef3b651f8bd3
   Realm: 85ab9e4f779d66f6e9ffeb118dc25b7f130c96ac
   RealmSwift: 69121c8b86d0ae005fb779efdb10e606732e1c74
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
-  TinyConstraints: 5ca700872f726c49d10829d7b00f31e4ec731f36
+  TinyConstraints: 6d0e495e72372556b31a0cc9b60983d5f780ef2f
 
-PODFILE CHECKSUM: 8a5a28b058aef5b7817d74225fe63a46dd604684
+PODFILE CHECKSUM: 50ad14b4b786bdb94bd185698042d7cefe6c3026
 
 COCOAPODS: 1.5.3

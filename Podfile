@@ -18,6 +18,7 @@ target 'LifeBits' do
   pod 'BonMot'
   pod 'SVProgressHUD'
   pod 'TinyConstraints'
+  pod 'Parchment'
   
   target 'LifeBitsTests' do
     inherit! :search_paths

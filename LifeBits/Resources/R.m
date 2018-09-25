@@ -24,9 +24,14 @@
 @end
 
 
+@interface RImages ()
+@property (nonatomic, strong) UIImage* calendar;
+@property (nonatomic, strong) UIImage* diary;
+@end
 
 @implementation RImages
-
+- (UIImage*)calendar { return [UIImage imageNamed:@"calendar"]; }
+- (UIImage*)diary { return [UIImage imageNamed:@"diary"]; }
 @end
 
 

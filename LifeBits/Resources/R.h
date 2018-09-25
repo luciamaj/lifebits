@@ -18,6 +18,8 @@ Undefined: "it_IT"
 
 
 @interface RImages: NSObject
+- (UIImage*)calendar;
+- (UIImage*)diary;
 @end
 
 

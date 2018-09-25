@@ -9,7 +9,9 @@
 import UIKit
 import RealmSwift
 
-class HomeViewController: BaseViewController {
+class HomeViewController: BaseViewController, UITabBarDelegate {
+    
+    @IBOutlet weak var tabBar: UITabBar!
     
     override var viewModel: HomeViewModel {
         guard let vm = super.viewModel as? HomeViewModel else {
@@ -18,8 +20,11 @@ class HomeViewController: BaseViewController {
         return vm
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBar.delegate = self;
         
         let realm = try! Realm()
         print(Realm.Configuration.defaultConfiguration.fileURL ?? "")
@@ -27,7 +32,7 @@ class HomeViewController: BaseViewController {
         let firstEntry = Entry()
         firstEntry.title = "My second Entry"
         firstEntry.content = "Just to try"
-        
+                
         try! realm.write {
             realm.add(firstEntry)
         }
@@ -39,6 +44,22 @@ class HomeViewController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        switch item.tag {
+            
+        case 1:
+            let shared = NavigationManager()
+            print("suca")
+
+            shared.replaceRoot(CalendarViewController())
+        case 2:
+             print("ciao")
+            break
+        default:
+            break
+        }
     }
 }
 

@@ -29,6 +29,9 @@
 		8985F9552158440A0098DE22 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8985F9542158440A0098DE22 /* HomeViewController.xib */; };
 		8985F9572158471D0098DE22 /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8985F9562158471D0098DE22 /* CalendarViewController.xib */; };
 		8985F95A21584B1F0098DE22 /* theme_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8985F95921584B1F0098DE22 /* theme_default.plist */; };
+		8985F96021584E7C0098DE22 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8985F95F21584E7B0098DE22 /* TabBarViewController.swift */; };
+		8985F9622158507F0098DE22 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8985F9612158507F0098DE22 /* TabBarViewController.xib */; };
+		8988FE04215A1005009E019C /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988FE03215A1005009E019C /* TabBarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		8985F9542158440A0098DE22 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		8985F9562158471D0098DE22 /* CalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
 		8985F95921584B1F0098DE22 /* theme_default.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = theme_default.plist; sourceTree = "<group>"; };
+		8985F95F21584E7B0098DE22 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = "/Users/lu/dev/XCode/LifeBits/LifeBits/Source/Interfaces/New Group/TabBarViewController.swift"; sourceTree = "<absolute>"; };
+		8985F9612158507F0098DE22 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		8988FE03215A1005009E019C /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		D6793BF88C65AB8EA275432E /* Pods_LifeBitsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeBitsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17FED3A3BDA7693C07F8904 /* Pods-LifeBits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeBits.release.xcconfig"; path = "Pods/Target Support Files/Pods-LifeBits/Pods-LifeBits.release.xcconfig"; sourceTree = "<group>"; };
 		F0E153CD906F9B65A542E618 /* Pods-LifeBitsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeBitsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LifeBitsTests/Pods-LifeBitsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,9 +187,10 @@
 		8985F92D2157973E0098DE22 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				8985F9512158431E0098DE22 /* Extensions */,
 				8985F92E215797590098DE22 /* BaseViewController.swift */,
 				8985F930215797940098DE22 /* BaseViewModel.swift */,
+				8985F95B21584BF60098DE22 /* Widgets */,
+				8985F9512158431E0098DE22 /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -191,6 +198,7 @@
 		8985F932215798BA0098DE22 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				8985F95E21584DEF0098DE22 /* TabBar */,
 				8985F938215799D30098DE22 /* Calendar */,
 				8985F933215798FB0098DE22 /* Home */,
 			);
@@ -288,6 +296,24 @@
 			path = Themes;
 			sourceTree = "<group>";
 		};
+		8985F95B21584BF60098DE22 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		8985F95E21584DEF0098DE22 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				8985F95F21584E7B0098DE22 /* TabBarViewController.swift */,
+				8985F9612158507F0098DE22 /* TabBarViewController.xib */,
+				8988FE03215A1005009E019C /* TabBarViewModel.swift */,
+			);
+			name = TabBar;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		E1F2DA5B91498AE892E6FC4A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,14 +400,16 @@
 				TargetAttributes = {
 					8985F8EF215630EB0098DE22 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1000;
 					};
 					8985F903215630ED0098DE22 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 8985F8EF215630EB0098DE22;
 					};
 					8985F90E215630ED0098DE22 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 8985F8EF215630EB0098DE22;
 					};
 				};
@@ -415,6 +443,7 @@
 				8985F9572158471D0098DE22 /* CalendarViewController.xib in Resources */,
 				8985F8FE215630ED0098DE22 /* LaunchScreen.storyboard in Resources */,
 				8985F93C2157A0900098DE22 /* Localizable.strings in Resources */,
+				8985F9622158507F0098DE22 /* TabBarViewController.xib in Resources */,
 				8985F95A21584B1F0098DE22 /* theme_default.plist in Resources */,
 				8985F8FB215630ED0098DE22 /* Assets.xcassets in Resources */,
 			);
@@ -503,6 +532,7 @@
 				"${BUILT_PRODUCTS_DIR}/CVCalendar/CVCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/Giotto/Giotto.framework",
 				"${BUILT_PRODUCTS_DIR}/Glotty/Glotty.framework",
+				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -516,6 +546,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CVCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Giotto.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Glotty.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -547,6 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8988FE04215A1005009E019C /* TabBarViewModel.swift in Sources */,
 				8985F94D2157B7BA0098DE22 /* R.m in Sources */,
 				8985F9532158433F0098DE22 /* UIViewController+Utilities.swift in Sources */,
 				8985F93A21579A050098DE22 /* CalendarViewModel.swift in Sources */,
@@ -556,6 +588,7 @@
 				8985F92821565DBC0098DE22 /* Entry.swift in Sources */,
 				8985F8F6215630EB0098DE22 /* HomeViewController.swift in Sources */,
 				8985F8F4215630EB0098DE22 /* AppDelegate.swift in Sources */,
+				8985F96021584E7C0098DE22 /* TabBarViewController.swift in Sources */,
 				8985F931215797940098DE22 /* BaseViewModel.swift in Sources */,
 				8985F95021583C500098DE22 /* NavigationManager.swift in Sources */,
 			);
@@ -734,7 +767,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LifeBits-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -754,7 +787,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = LuciaMaj.LifeBits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LifeBits-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -774,7 +807,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = LuciaMaj.LifeBitsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeBits.app/LifeBits";
 			};
@@ -795,7 +828,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = LuciaMaj.LifeBitsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeBits.app/LifeBits";
 			};
@@ -815,7 +848,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = LuciaMaj.LifeBitsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LifeBits;
 			};
@@ -835,7 +868,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = LuciaMaj.LifeBitsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LifeBits;
 			};

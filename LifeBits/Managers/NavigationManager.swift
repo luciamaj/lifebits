@@ -7,15 +7,6 @@
 //
 
 import Foundation
-
-//
-//  NavigationManager.swift
-//  GuidaProsit
-//
-//  Created by Elena Porcelli.
-//  Copyright © 2018 Dedecube. All rights reserved.
-//
-
 import UIKit
 
 enum NavigationItem {

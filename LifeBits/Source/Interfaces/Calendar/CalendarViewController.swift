@@ -10,13 +10,6 @@ class CalendarViewController: BaseViewController, CVCalendarViewDelegate, CVCale
     
     private var currentCalendar: Calendar?
     
-    override var viewModel: CalendarViewModel {
-        guard let vm = super.viewModel as? CalendarViewModel else {
-            fatalError("viewmodel of the wrong type")
-        }
-        return vm
-    }
-    
     override func awakeFromNib() {
         let timeZoneBias = 480 // (UTC+08:00)
         currentCalendar = Calendar(identifier: .gregorian)
@@ -27,7 +20,7 @@ class CalendarViewController: BaseViewController, CVCalendarViewDelegate, CVCale
     }
     override func viewDidAppear(_ animated: Bool) {
         
-        super.viewDidLoad()
+        /*super.viewDidLoad()
         
         calendarView.delegate = self
         menuView.delegate = self
@@ -47,7 +40,7 @@ class CalendarViewController: BaseViewController, CVCalendarViewDelegate, CVCale
         calendarView.toggleCurrentDayView()
         if let currentCalendar = currentCalendar {
              self.navigationItem.title = CVDate(date: Date(), calendar: currentCalendar).globalDescription
-        }
+        }*/
     }
     
     func presentedDateUpdated(_ date: CVDate) {
@@ -59,8 +52,8 @@ class CalendarViewController: BaseViewController, CVCalendarViewDelegate, CVCale
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        menuView.commitMenuViewUpdate()
-        calendarView.commitCalendarViewUpdate()
+        //menuView.commitMenuViewUpdate()
+        //calendarView.commitCalendarViewUpdate()
     }
     
     override func viewDidLoad() {
