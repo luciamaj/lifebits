@@ -9,10 +9,8 @@
 import UIKit
 import RealmSwift
 
-class HomeViewController: BaseViewController, UITabBarDelegate {
-    
-    @IBOutlet weak var tabBar: UITabBar!
-    
+class HomeViewController: BaseViewController {
+        
     override var viewModel: HomeViewModel {
         guard let vm = super.viewModel as? HomeViewModel else {
             fatalError("viewmodel of the wrong type")
@@ -23,8 +21,6 @@ class HomeViewController: BaseViewController, UITabBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tabBar.delegate = self;
         
         let realm = try! Realm()
         print(Realm.Configuration.defaultConfiguration.fileURL ?? "")
